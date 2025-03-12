@@ -1,0 +1,92 @@
+
+<!DOCTYPE html> 
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Surdeigsbrød</title> 
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<style>
+    .animated-icon {
+        position: relative;
+        animation-name: float;
+        animation-duration: 12s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+
+@keyframes float {
+  0%   {left:0rem; top:0rem;}
+  100% {left:20rem; top:0px;}
+}
+
+#nummerTo {
+    animation-delay: 2s;
+    animation-duration: 15s;
+    font-size: 50px;
+}
+
+</style>
+
+
+
+</head>
+
+
+<body>
+    <h1>
+        Surdeigsbrød! &lt;3
+        
+        
+    </h1>
+    
+    <br>
+    <h5>
+        Hvor mange gram starter har du i dag?
+    </h5>
+    
+
+    <br>
+    
+    <input id="starter" type="number" placeholder="0"> 
+    
+    <p>
+        Da trenger du:
+    </p>
+    
+    <li id="vann"> 0 g vann </li>
+    <li id="mel"> 0 g mel </li>
+    <li>og en klype salt &lt;3 </li>
+    
+
+    <br>
+
+
+
+
+
+    
+<br>
+    
+    <i class="material-icons animated-icon"style="color: white;">cloud</i>
+    <br>
+    <i class="material-icons animated-icon"style="color: white;" id="nummerTo">cloud</i>
+
+
+    <script src="script.js"></script> 
+
+
+    <div></div>
+
+    
+</body>
+
+
+</html>
+
+
+
