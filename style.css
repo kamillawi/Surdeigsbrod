@@ -7,6 +7,7 @@ html, body {
     color: #000000;
     padding-top: 1rem;
     padding-left: 2rem;
+    text-align: center;
     
 }
 
@@ -40,6 +41,7 @@ li {
     line-height: normal;
     margin: 0.5rem;
     padding-top: 0.2rem;
+
 }
 
 p {
@@ -56,4 +58,32 @@ h5 {
     font-weight: 100;
     line-height: normal;
     margin: 1rem;
+}
+
+
+/*
+<i class="material-icons animated-icon"style="color: white;">cloud</i>
+<br>
+<i class="material-icons animated-icon"style="color: white;" id="nummerTo">cloud</i>
+*/
+
+
+.animated-icon {
+    position: absolute;
+    animation-name: float;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+@keyframes float {
+0%   {left:0; top:31rem;}
+100% {left:100vw; top:31rem;}
+}
+
+#nummerTo {
+animation-delay: 0s;
+animation-duration: 38s;
+font-size: 50px;
 }
