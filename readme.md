@@ -44,9 +44,6 @@ python calculate.py
 
 This is a practice project, but if you have suggestions or improvements, feel free to fork the repository and submit a pull request.
 
-## License
-
-This project is licensed under the MIT License.
 
 ---
 
