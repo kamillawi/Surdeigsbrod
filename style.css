@@ -87,3 +87,16 @@ animation-delay: 0s;
 animation-duration: 38s;
 font-size: 50px;
 }
+
+
+#knapp {
+    background-color: #ea81de;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+    cursor: pointer;
+    margin-top: 1rem;
+}
