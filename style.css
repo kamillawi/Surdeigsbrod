@@ -1,0 +1,147 @@
+html {
+    min-height: 100%;
+    background: linear-gradient(to bottom, #E8B7DB, #FFF9FE) fixed;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    color: #000000;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+h1 {
+    color: #7a2570;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-align: center;
+    margin: 1rem;
+    padding-bottom: 1rem;
+}
+
+input {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    background: #FFF;
+    border: 0px solid #ea81de;
+    border-radius: 6px;
+    padding: 0.5rem;
+    margin: 1rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    margin: 0.5rem;
+    padding-top: 0.2rem;
+
+}
+
+p {
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
+    margin: 1rem;
+}
+
+h5 {
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
+    margin: 1rem;
+}
+
+
+/*
+<i class="material-icons animated-icon"style="color: white;">cloud</i>
+<br>
+<i class="material-icons animated-icon"style="color: white;" id="nummerTo">cloud</i>
+*/
+
+
+.animated-icon {
+    position: absolute;
+    animation-name: float;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+@keyframes float {
+0%   {left:0; top:25rem;}
+100% {left:100vw; top:25rem;}
+}
+
+#nummerTo {
+animation-delay: 0s;
+animation-duration: 38s;
+font-size: 50px;
+}
+
+
+#oppskrift {
+    max-width: 480px;
+    margin: 2rem auto;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    text-align: left;
+}
+
+#oppskrift h2 {
+    text-align: center;
+    color: #7a2570;
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 1.2rem;
+}
+
+.steg {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    align-items: flex-start;
+}
+
+.steg-nummer {
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.steg p {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+}
+
+.ingredienser {
+    font-weight: 600;
+}
+
+#knapp {
+    background-color: #ea81de;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+    cursor: pointer;
+    margin-top: 1rem;
+}
