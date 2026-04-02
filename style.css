@@ -1,6 +1,7 @@
 html {
     min-height: 100%;
     background: linear-gradient(to bottom, #E8B7DB, #FFF9FE) fixed;
+    overflow-x: hidden;
 }
 
 body {
@@ -8,8 +9,9 @@ body {
     padding: 0;
     font-family: 'Inter', sans-serif;
     color: #000000;
-    padding-top: 1rem;
+    padding-top: 2.5rem;
     text-align: center;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -38,7 +40,7 @@ input {
 ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 0 3rem;
 }
 
 li {
@@ -85,8 +87,8 @@ h5 {
 
 
 @keyframes float {
-0%   {left:0; top:25rem;}
-100% {left:100vw; top:25rem;}
+0%   {left:0; top:28rem;}
+100% {left:100vw; top:28rem;}
 }
 
 #nummerTo {
@@ -98,11 +100,18 @@ font-size: 50px;
 
 #oppskrift {
     max-width: 480px;
-    margin: 2rem auto;
+    margin: 5rem auto 2rem;
     background: rgba(255, 255, 255, 0.5);
     border-radius: 16px;
     padding: 1.5rem 2rem;
     text-align: left;
+}
+
+@media (max-width: 520px) {
+    #oppskrift {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
 }
 
 #oppskrift h2 {
