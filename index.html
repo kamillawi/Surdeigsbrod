@@ -1,113 +1,126 @@
-
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="no">
-
 <head>
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Surdeigsbrød</title> 
-    <link rel="stylesheet" href="style.css"> 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-<style>
- 
-
-</style>
-
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surdeigsbrød — En liten kalkulator</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:ital,wght@0,400..600;1,400&family=Instrument+Serif:ital@0;1&display=swap">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
-    <h1>
-        Surdeigsbrød! <i class="material-icons" style="color: white; vertical-align: middle; font-size: 2rem;">favorite</i>
-        
-        
-    </h1>
-    
-    <br>
-    <h5>
-        Hvor mange gram starter har du i dag?
-    </h5>
-    
+    <div class="grain" aria-hidden="true"></div>
+    <div class="orb orb--1" aria-hidden="true"></div>
+    <div class="orb orb--2" aria-hidden="true"></div>
+    <div class="orb orb--3" aria-hidden="true"></div>
 
-    <br>
-    
-    <input id="starter" type="number" placeholder="0"> 
-    <button id="knapp">Regn ut</button>
-    
-    <p>
-        Da trenger du:
-    </p>
-    
-    <ul>
-        <li id="vann"> 0 g vann </li>
-        <li id="mel"> 0 g mel </li>
-        <li id="salt">og en klype salt &lt;3 </li>
-    </ul>
-    
-
-    <br>
-
-
-
-
-
-    
-<br>
-    
-    <section id="oppskrift">
-        <h2>Oppskrift</h2>
-
-        <div class="steg">
-            <span class="steg-nummer">①</span>
-            <div>
-                <p class="ingredienser">160 g starter &nbsp;·&nbsp; 230 g vann &nbsp;·&nbsp; 400 g mel &nbsp;·&nbsp; 5 g salt</p>
-                <p>Bisp/bland alt sammen til en seig røre. Etter 30 min: kna 3–4 min.</p>
-            </div>
+    <header class="hero">
+        <div class="eyebrow">
+            <span class="dot"></span>
+            <span>Est. MMXXVI</span>
+            <span class="dot"></span>
         </div>
+        <h1 class="title">
+            <span class="title-line">Surdeigs</span>
+            <span class="title-line"><em>brød</em></span>
+        </h1>
+        <p class="lede">En liten kalkulator for det perfekte brødet<br><em>fra starter til skorpe.</em></p>
 
-        <div class="steg">
-            <span class="steg-nummer">②</span>
-            <div>
-                <p>Etter 1 time: stretch &amp; fold, 4 ganger, hver halvtime.</p>
-            </div>
-        </div>
+        <svg class="wheat" viewBox="0 0 60 80" aria-hidden="true">
+            <line x1="30" y1="20" x2="30" y2="76" stroke="currentColor" stroke-width="0.8" stroke-linecap="round"/>
+            <g fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round">
+                <path d="M30 22 Q22 20 18 14 Q24 14 30 20"/>
+                <path d="M30 22 Q38 20 42 14 Q36 14 30 20"/>
+                <path d="M30 32 Q22 30 18 24 Q24 24 30 30"/>
+                <path d="M30 32 Q38 30 42 24 Q36 24 30 30"/>
+                <path d="M30 42 Q22 40 18 34 Q24 34 30 40"/>
+                <path d="M30 42 Q38 40 42 34 Q36 34 30 40"/>
+                <path d="M30 52 Q22 50 18 44 Q24 44 30 50"/>
+                <path d="M30 52 Q38 50 42 44 Q36 44 30 50"/>
+            </g>
+        </svg>
+    </header>
 
-        <div class="steg">
-            <span class="steg-nummer">③</span>
-            <div>
-                <p>Form til en burrito-ball, putt i hevekurv og legg i kjøleskapet over natten.</p>
-            </div>
-        </div>
+    <section class="calc">
+        <div class="calc-card">
+            <div class="calc-card__inner">
+                <div class="card-meta">
+                    <span class="num">№ 01</span>
+                    <span class="lbl">Kalkulatoren</span>
+                </div>
+                <h2 class="calc-question">Hvor mange gram <em>starter</em> har du i dag?</h2>
 
-        <div class="steg">
-            <span class="steg-nummer">④</span>
-            <div>
-                <p>Neste dag: putt gryta i ovnen og varm til 230 °C.</p>
-                <p>Legg deigen på bakepapir, kutt den og putt nedi gryta.</p>
-                <p>Stek <strong>med lokk</strong>: 25 min på 230 °C.</p>
-                <p>Stek <strong>uten lokk</strong>: 25 min på 200 °C.</p>
+                <div class="calc-input">
+                    <input id="starter" type="number" placeholder="000" inputmode="numeric" aria-label="Gram starter">
+                    <span class="unit">gram</span>
+                    <button id="knapp" type="button">
+                        <span>Regn ut</span>
+                        <span class="arrow" aria-hidden="true">→</span>
+                    </button>
+                </div>
+
+                <div class="calc-result">
+                    <p class="result-intro">Da trenger du —</p>
+                    <ul>
+                        <li><span class="dash" aria-hidden="true"></span><span id="vann">0 g vann</span></li>
+                        <li><span class="dash" aria-hidden="true"></span><span id="mel">0 g mel</span></li>
+                        <li><span class="dash" aria-hidden="true"></span><span id="salt">og en klype salt</span></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <i class="material-icons animated-icon"style="color: white;">cloud</i>
-    <br>
-    <i class="material-icons animated-icon"style="color: white;" id="nummerTo">cloud</i>
+    <section class="recipe">
+        <div class="card-meta recipe-meta">
+            <span class="num">№ 02</span>
+            <span class="lbl">Oppskriften</span>
+        </div>
+        <h2 class="recipe-title">Slik baker du <em>brødet</em></h2>
 
+        <ol class="steps">
+            <li class="step">
+                <div class="step-num">01</div>
+                <div class="step-body">
+                    <p class="step-tag">Bland</p>
+                    <p class="step-ingredients">160 g starter &nbsp;·&nbsp; 230 g vann &nbsp;·&nbsp; 400 g mel &nbsp;·&nbsp; 5 g salt</p>
+                    <p class="step-text">Bland alt sammen til en seig røre. Etter 30 minutter: kna i 3–4 minutter.</p>
+                </div>
+            </li>
+            <li class="step">
+                <div class="step-num">02</div>
+                <div class="step-body">
+                    <p class="step-tag">Strekk</p>
+                    <p class="step-text">Etter 1 time: stretch &amp; fold, fire ganger, hver halvtime.</p>
+                </div>
+            </li>
+            <li class="step">
+                <div class="step-num">03</div>
+                <div class="step-body">
+                    <p class="step-tag">Hev</p>
+                    <p class="step-text">Form til en burrito-ball, putt i hevekurv og legg i kjøleskapet over natten.</p>
+                </div>
+            </li>
+            <li class="step">
+                <div class="step-num">04</div>
+                <div class="step-body">
+                    <p class="step-tag">Stek</p>
+                    <p class="step-text">Neste dag: forvarm gryta i ovnen til 230 °C. Legg deigen på bakepapir, kutt mønster i toppen, og senk ned i gryta.</p>
+                    <p class="step-text"><em>Med lokk:</em> 25 min på 230 °C. <em>Uten lokk:</em> 25 min på 200 °C.</p>
+                </div>
+            </li>
+        </ol>
+    </section>
 
-    <script src="script.js"></script> 
+    <footer class="foot">
+        <span class="foot-mark">✦</span>
+        <span><em>baked with love</em></span>
+        <span class="foot-mark">✦</span>
+    </footer>
 
-
-    <div></div>
-
-    
+    <script src="script.js"></script>
 </body>
-
-
 </html>
-
-
-

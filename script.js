@@ -1,27 +1,18 @@
-
-
-let starterInput = document.getElementById("starter");
+const starterInput = document.getElementById("starter");
+const vannEl = document.getElementById("vann");
+const melEl = document.getElementById("mel");
+const saltEl = document.getElementById("salt");
+const knapp = document.getElementById("knapp");
 
 function visVerdi() {
-    let gramSurdeigsstarter = starterInput.value;
-
-    vann.textContent = Math.round(gramSurdeigsstarter * 1.44) + "g vann";
-    mel.textContent = Math.round(gramSurdeigsstarter * 2.5) + "g mel";
-    salt.textContent = gramSurdeigsstarter > 250 ? "og to klyper salt <3" : "og en klype salt <3";
-
-
-    
+    const gram = Number(starterInput.value) || 0;
+    vannEl.textContent = Math.round(gram * 1.44) + " g vann";
+    melEl.textContent = Math.round(gram * 2.5) + " g mel";
+    saltEl.textContent = gram > 250 ? "og to klyper salt" : "og en klype salt";
 }
 
-
-
-starterInput.addEventListener("keypress", function(event) {
-    if (event.key === "Enter") {
-        visVerdi(); // Kall på visVerdi-funksjonen når Enter trykkes
-    }
+starterInput.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") visVerdi();
 });
 
-knapp.addEventListener("click", function() {
-    visVerdi(); // Call visVerdi when the button is clicked
-});
-
+knapp.addEventListener("click", visVerdi);
